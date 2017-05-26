@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .area{
+            width: 800px;
+            height: 180px;
+            margin:100px auto;
+            overflow: hidden;
+        }
+        ul{
+            width: 6400px;
+            transition: all 8s;
+            animation:move 8s linear infinite;
+        }
+        ul>li{
+            float: left;
+        }
+        ul>li>img{
+            width: 800px;
+            height: 180px;
+        }
+        /*鼠标移上来暂停*/
+        ul:hover{
+            animation-play-state: paused;
+        }
+        /*动画css3*/
+        @keyframes move {
+            from{
+                transform: translateX(0px);
+            }
+            to{
+                transform: translateX(-3200px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="area">
+    <ul>
+        <li><img src="img/1.jpg" alt=""></li>
+        <li><img src="img/2.jpg" alt=""></li>
+        <li><img src="img/3.jpg" alt=""></li>
+        <li><img src="img/4.jpg" alt=""></li>
+        <!--实现无缝-->
+        <li><img src="img/1.jpg" alt=""></li>
+        <li><img src="img/2.jpg" alt=""></li>
+        <li><img src="img/3.jpg" alt=""></li>
+        <li><img src="img/4.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>
